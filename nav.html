@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://www.synology.com/zh-cn/ -->
+<html lang="zh" data-lang-code="zh-cn" data-user-country="CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="haorooms">
+        <meta name="description" content="haorooms移动端多级导航-haorooms原创">
+        <title>haorooms移动端多级导航-haorooms原创</title>
+        <link href="resource/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" section="common" href="./resource/syno.css" />
+        <script type="text/javascript" src="./resource/jquery-2.1.1.min.js"></script>
+    </head>
+    <body class="clearfix">
+            <header>
+                <nav id="header_nav">
+                    <div id="main_menu">
+                        <a id="menu_link">
+                            <div id="line_1"></div>
+                            <div id="line_2"></div>
+                            <div id="line_3"></div>
+                        </a>
+                        <a href="#" title="上方功能区块" accesskey="U">&nbsp;&nbsp;&nbsp;</a>
+                        <div class="container">
+                              <a class="brand" href="http://www.haorooms.com/"><span class="ilogo">haorooms</span></a> 
+
+                            <ul class="menu" id="g_menu">
+                                <div class="triangle"></div>
+
+                                <li class="haschild">
+                                    <a href="http://www.haorooms.com/" title="NAS"  class="g_nav">首页</a>
+                                    <ul class="dropdown nas" targetheight="396">
+                                        <div class="tabs hide-mobile">
+                                            <a class="btn-tab" href="#"> 首页子导航 </a>
+                                            <a class="btn-tab" href="#"> 首页子导航2</a>
+                                            <a class="btn-tab" href="#"> 首页子导航3</a>
+                                            <a class="btn-tab" href="#"> 首页子导航4</a>
+                                            <a class="btn-tab" href="#">首页子导航5 </a>
+                                        </div>
+                                    </ul>
+                                </li>
+
+                                <li class="haschild">
+                                    <a href="http://www.haorooms.com/" title="视频监控" class="g_nav">视频监控</a>
+                                    <ul class="dropdown surveillance" targetheight="260" style="">
+                                        <div class="tabs hide-mobile">
+                                            <a class="btn-tab" href="#"> 视频监控6.0 </a>
+                                            <a class="btn-tab" href="#"> 视频监控0 </a>
+                                            <a class="btn-tab" href="#"> 视频监控</a>
+                                            <a class="btn-tab" href="#"> 视频监控</a>
+                                            <a class="btn-tab" href="#">视频监控 </a>
+
+                                        </div>
+                                    </ul>
+                                </li>
+
+                                <li class="haschild">
+                                    <a href="http://www.haorooms.com/" title="视频监控" class="g_nav">视频监控</a>
+                                    <ul class="dropdown surveillance" targetheight="260" style="">
+                                        <div class="tabs hide-mobile">
+                                            <a class="btn-tab" data-target="surveillance">
+                                                Surveillance Station 7.2
+                                            </a>
+                                            <a class="btn-tab" data-target="surveillance_products">
+                                                产品
+                                            </a>
+                                            <a class="btn-tab" data-target="surveillance_solution">
+                                                解決方案
+                                            </a>
+
+                                        </div>
+                                    </ul>
+                                </li>
+
+
+                                <li class="haschild">
+                                    <a href="http://www.haorooms.com/" title="视频监控" class="g_nav">视频监控</a>
+                                    <ul class="dropdown surveillance" targetheight="260" style="">
+                                        <div class="tabs hide-mobile">
+                                            <a class="btn-tab" data-target="surveillance">
+                                                Surveillance Station 7.2
+                                            </a>
+                                            <a class="btn-tab" data-target="surveillance_products">
+                                                产品
+                                            </a>
+                                            <a class="btn-tab" data-target="surveillance_solution">
+                                                解決方案
+                                            </a>
+
+                                        </div>
+                                    </ul>
+                                </li>
+
+                                <li class="haschild">
+                                    <a href="http://www.haorooms.com/" title="视频监控" class="g_nav">视频监控</a>
+                                    <ul class="dropdown surveillance" targetheight="260" style="">
+                                        <div class="tabs hide-mobile">
+                                            <a class="btn-tab" data-target="surveillance">
+                                                Surveillance Station 7.2
+                                            </a>
+                                            <a class="btn-tab" data-target="surveillance_products">
+                                                产品
+                                            </a>
+                                            <a class="btn-tab" data-target="surveillance_solution">
+                                                解決方案
+                                            </a>
+
+                                        </div>
+                                    </ul>
+                                </li>
+
+
+                                <li>
+                                    <a href="http://www.haorooms.com/" title="视频监控" class="g_nav">视频监控</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </header>		
+            <!-- Begin page content -->
+
+
+
+
+
+        <style>body,html{background-color:#ddd}</style>
+
+        <script>
+            $("#header_nav").on("click", ".g_nav", function (event) {
+                var parentLi = $(this).parent("li");
+                if (parentLi.hasClass("haschild")) {
+                    event.preventDefault();
+                    if (parentLi.hasClass("open")) {
+                        parentLi.removeClass("open")
+                    } else {
+                        parentLi.addClass("open").siblings().removeClass("open");
+                    }
+                }
+            })
+            $("#header_nav").on("click", "#menu_link", function () {
+                if ($("#g_menu").hasClass("open")) {
+                    $("#g_menu").removeClass("open");
+                } else {
+                    $("#g_menu").addClass("open");
+                }
+
+            })
+        </script>
+
+
+
+
+    </body></html>
